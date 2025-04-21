@@ -11,7 +11,7 @@ def list_users(client, output_path):
         response = client.list_users()
         with open(output_path, "w") as f:
             f.write(json.dumps(response, indent=2, default=str))
-        print(f"\033[92m[+]\033[0m Saved list of groups to {output_path}")
+        print(f"\033[92m[+]\033[0m Saved list of users to {output_path}")
     except Exception as e:
         error_message = f"\033[91m[!]\033[0m Error listing groups: {e}"
         print(error_message)
